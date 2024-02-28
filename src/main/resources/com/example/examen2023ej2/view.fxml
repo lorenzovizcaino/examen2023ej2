@@ -8,10 +8,13 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="686.0" prefWidth="990.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane fx:id="anchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="686.0" prefWidth="990.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.examen2023ej2.Controller">
    <children>
       <TextField fx:id="tfNombre" layoutX="207.0" layoutY="85.0" prefHeight="43.0" prefWidth="466.0" />
-      <TextField fx:id="tfCiudadOrigen" layoutX="207.0" layoutY="163.0" prefHeight="43.0" prefWidth="297.0" />
+      <TextField fx:id="tfCiudadOrigen" editable="false" layoutX="207.0" layoutY="163.0" prefHeight="43.0" prefWidth="297.0" promptText="Vigo">
+         <font>
+            <Font size="18.0" />
+         </font></TextField>
       <ChoiceBox fx:id="tfCiudadDestino" layoutX="207.0" layoutY="254.0" prefHeight="43.0" prefWidth="297.0" />
       <TextField fx:id="tfTarifa" layoutX="266.0" layoutY="343.0" prefHeight="43.0" prefWidth="297.0" />
       <Label fx:id="lbTarifa" layoutX="102.0" layoutY="343.0" prefHeight="43.0" prefWidth="134.0" text="Tarifa" textFill="#113ea8">
@@ -39,36 +42,36 @@
             <Font size="18.0" />
          </font>
       </Label>
-      <CheckBox layoutX="757.0" layoutY="146.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="122.0" text="Desayuno">
+      <CheckBox fx:id="chDesayuno" layoutX="757.0" layoutY="146.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="122.0" text="Desayuno">
          <font>
             <Font size="18.0" />
          </font>
       </CheckBox>
-      <CheckBox layoutX="757.0" layoutY="189.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="122.0" text="Cena">
+      <CheckBox fx:id="chCena" layoutX="757.0" layoutY="189.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="122.0" text="Cena">
          <font>
             <Font size="18.0" />
          </font>
       </CheckBox>
-      <CheckBox layoutX="757.0" layoutY="237.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="122.0" text="Comida">
+      <CheckBox fx:id="chComida" layoutX="757.0" layoutY="237.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="122.0" text="Comida">
          <font>
             <Font size="18.0" />
          </font>
       </CheckBox>
-      <Button layoutX="144.0" layoutY="517.0" mnemonicParsing="false" prefHeight="55.0" prefWidth="166.0" text="Guardar">
+      <Button fx:id="btnGuardar" layoutX="144.0" layoutY="517.0" mnemonicParsing="false" onAction="#Guardar" prefHeight="55.0" prefWidth="166.0" text="Guardar">
          <font>
             <Font size="18.0" />
          </font>
       </Button>
-      <Button layoutX="397.0" layoutY="517.0" mnemonicParsing="false" prefHeight="55.0" prefWidth="166.0" text="Mostrar">
+      <Button fx:id="btnMostrar" layoutX="397.0" layoutY="517.0" mnemonicParsing="false" onAction="#Mostrar" prefHeight="55.0" prefWidth="166.0" text="Mostrar">
          <font>
             <Font size="18.0" />
          </font>
       </Button>
-      <Button layoutX="659.0" layoutY="517.0" mnemonicParsing="false" prefHeight="55.0" prefWidth="166.0" text="Cancelar">
+      <Button fx:id="btnCancelar" layoutX="659.0" layoutY="517.0" mnemonicParsing="false" onAction="#Cancelar" prefHeight="55.0" prefWidth="166.0" text="Cancelar">
          <font>
             <Font size="18.0" />
          </font>
       </Button>
-      <Button layoutX="757.0" layoutY="297.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="101.0" text="Calcular" />
+      <Button fx:id="btnCalcular" layoutX="757.0" layoutY="297.0" mnemonicParsing="false" onAction="#Calcular" prefHeight="35.0" prefWidth="101.0" text="Calcular" />
    </children>
 </AnchorPane>
